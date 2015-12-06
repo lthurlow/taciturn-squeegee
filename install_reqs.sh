@@ -8,7 +8,10 @@ cd bmv2;
 ./autogen.sh;
 ./configure;
 make;
+cd ../p4c-bmv2;
+sudo python ./setup.py install;
+cd ..;
 sudo apt-get install mininet;
 sudo pip install scapy thrift networkx;
 cd ..;
-sudo ./setup_p4.sh
+sudo ./setup_p4.sh;
