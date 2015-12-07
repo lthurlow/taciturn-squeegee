@@ -1,0 +1,3 @@
+[submodule "behavioral-model"]
+	path = bmv2
+	url = https://github.com/lthurlow/behavioral-model

@@ -1,6 +1,6 @@
 sudo apt-get update;
 sudo apt-get install -y g++ git python2.7 make autoconf;
-sudo git clone https://github.com/p4lang/behavioral-model.git bmv2;
+git pull --recurse-submodules;
 sudo git clone https://github.com/p4lang/p4c-bm.git p4c-bmv2;
 sudo pip install -r ./p4c-bmv2/requirements.txt;
 sudo ./bmv2/install_deps.sh;
