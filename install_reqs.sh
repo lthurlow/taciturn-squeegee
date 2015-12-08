@@ -1,7 +1,7 @@
 sudo apt-get update;
 sudo apt-get install -y g++ git python2.7 make autoconf;
-git pull --recurse-submodules;
-sudo git clone https://github.com/p4lang/p4c-bm.git p4c-bmv2;
+git submodule update --init;
+git clone https://github.com/p4lang/p4c-bm.git p4c-bmv2;
 sudo pip install -r ./p4c-bmv2/requirements.txt;
 sudo ./bmv2/install_deps.sh;
 cd bmv2;
@@ -11,7 +11,6 @@ make;
 cd ../p4c-bmv2;
 sudo python ./setup.py install;
 cd ..;
-sudo apt-get install mininet;
+sudo apt-get install -y mininet;
 sudo pip install scapy thrift networkx;
-cd ..;
 sudo ./setup_p4.sh;
